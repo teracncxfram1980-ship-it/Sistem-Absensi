@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ruang Informasi — Mengapa Anak Muda Lebih Sering Mendapatkan Informasi dari Media Sosial?</title>
+
+  <!-- Google Fonts: Lora (Editorial Serif) & Plus Jakarta Sans (Modern Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Eksternal Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Eksternal JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Reading Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- 2. Sticky Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo / Nama Brand -->
+      <a class="brand-logo" href="#">
+        <div class="brand-symbol">R</div>
+        <span class="brand-title">BAHASA INDONESIA BI018</span>
+      </a>
+
+      <!-- Desktop Navigasi -->
+      <nav>
+        <ul class="nav-center">
+          <li><a class="nav-link" href="#">Beranda</a></li>
+          <li><a class="nav-link active" href="#">Artikel</a></li>
+          <li><a class="nav-link" href="#">Tentang</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Cari & Hamburger Mobile) -->
+      <div class="nav-actions">
+        <button aria-label="Cari artikel" class="icon-btn" id="search-trigger">
+          <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+        </button>
+        <button aria-label="Menu navigasi" class="icon-btn menu-toggle" id="hamburger-btn">
+          <i data-lucide="menu" id="hamburger-icon" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigasi -->
+    <div class="mobile-menu" id="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a class="mobile-nav-link" href="#">Beranda</a></li>
+        <li><a class="mobile-nav-link" href="#" style="color: var(--color-accent);">Artikel</a></li>
+        <li><a class="mobile-nav-link" href="#">Tentang</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 3. Modal Dialog Pencarian -->
+  <div id="search-modal">
+    <div class="search-dialog">
+      <div class="search-input-wrap">
+        <i data-lucide="search" style="width: 20px; height: 20px; color: var(--text-muted);"></i>
+        <input autofocus placeholder="Ketik kata kunci pencarian..." type="text">
+        <button class="icon-btn" id="close-search" style="border: none; width: 32px; height: 32px;">
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">Tekan ESC untuk menutup</p>
+    </div>
+  </div>
+
+  <!-- 4. Kontainer Utama Artikel Ilmiah Populer -->
+  <main class="article-page">
+
+    <!-- Header Artikel & Metadata -->
+    <header class="article-header">
+      <span class="category-badge">Sosial &amp; Teknologi</span>
+      <h1 class="article-title">Mengapa Anak Muda Lebih Sering Mendapatkan Informasi dari Media Sosial?</h1>
+      <p class="article-summary">
+        Media sosial telah menjadi salah satu sumber informasi yang dekat dengan kehidupan anak muda. Namun, kemudahan mendapatkan informasi perlu diimbangi dengan kemampuan untuk menyaring dan memeriksa kebenarannya.
+      </p>
+
+      <!-- Baris Informasi Penulis & Waktu Baca -->
+      <div class="meta-bar">
+        <div class="author-section">
+          <div class="author-avatar">NP</div>
+          <div class="author-details">
+            <span class="author-name">Kelompok 14</span>
+            <div class="article-time-info">
+              <span>5 September 2026</span>
+              <span>•</span>
+              <span style="color: var(--color-accent-amber); font-weight: 500;">Editorial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-right">
+          <div class="reading-badge">
+            <i data-lucide="clock" style="width: 15px; height: 15px;"></i>
+            <span>3 menit membaca</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Gambar Ilustrasi Utama -->
+    <figure class="featured-media">
+      <img alt="Ilustrasi editorial anak muda menggunakan smartphone dan media sosial untuk mendapatkan informasi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBreugzJUkD0hNq7YPield5Kyo9LMsAa-_Dx5UsPYHOVom_yb9oUkCTSiUA1V5jWMSudhW9auToe2UqPUhyLXxn-YOlqHZwn2VxE8b0u_fEGcqJK75LBVK3Sy8TplVcMU0HY8IRxxF3BqGUN-EkvOCcRhighnx-HDekDKPk1J_qE5pnkzK6bcyJssq315Q_I2bAR4JGhOpDw43GeUDG1BVY3HUAH17xrqiTkv_MoQYXt_hhu7Dqnk3fbw" loading="lazy">
+      <figcaption class="media-caption">
+        Ilustrasi eksplorasi informasi digital di era konektivitas media sosial.
+      </figcaption>
+    </figure>
+
+    <!-- Isi Teks Artikel -->
+    <article class="article-content" id="main-article-text">
+      <p>
+        Saat ini, mencari informasi tidak harus dilakukan dengan membaca koran atau menonton berita di televisi. Cukup membuka media sosial melalui ponsel, berbagai informasi sudah dapat ditemukan dalam waktu singkat. Mulai dari berita terkini, informasi pendidikan, kesehatan, hiburan, hingga isu yang sedang ramai dibicarakan. Kondisi ini membuat media sosial menjadi salah satu tempat yang dekat dengan kehidupan anak muda.
+      </p>
+
+      <p>
+        Salah satu alasan media sosial banyak digunakan adalah karena informasi dapat diperoleh dengan cepat dan mudah. Anak muda tidak perlu mencari informasi dalam waktu yang lama. Berbagai informasi muncul melalui beranda media sosial dan dapat dibaca atau ditonton kapan saja. Selain itu, bentuk informasi yang beragam, seperti video, gambar, dan tulisan singkat, membuat informasi terasa lebih menarik dan mudah diterima.
+      </p>
+
+      <p>
+        Namun, kemudahan tersebut juga memiliki sisi lain. Tidak semua informasi yang beredar di media sosial dapat langsung dipercaya. Informasi yang salah atau belum terbukti kebenarannya dapat menyebar dengan cepat. Jika seseorang langsung mempercayai dan membagikan informasi tanpa memeriksa sumbernya, kesalahan informasi dapat semakin luas.
+      </p>
+
+      <!-- Highlight Kutipan Editorial -->
+      <div class="quote-highlight-box">
+        <span class="quote-symbol">“</span>
+        <blockquote class="quote-text">
+          “Informasi yang cepat belum tentu benar.”
+        </blockquote>
+        <p class="quote-subtext">— Catatan Refleksi Literasi Digital</p>
+      </div>
+
+      <p>
+        Karena itu, penggunaan media sosial perlu diikuti dengan kemampuan literasi digital. Anak muda perlu membiasakan diri memeriksa sumber informasi, membandingkan dengan sumber lain, serta tidak terburu-buru membagikan informasi yang belum jelas kebenarannya. Dengan begitu, media sosial tidak hanya menjadi tempat mendapatkan informasi dengan cepat, tetapi juga dapat digunakan secara lebih bijak dan bertanggung jawab.
+      </p>
+
+      <p>
+        Pada akhirnya, media sosial memang memberikan kemudahan bagi anak muda untuk memperoleh informasi. Akan tetapi, kemudahan tersebut harus diimbangi dengan sikap kritis. Informasi yang cepat belum tentu benar, sehingga kemampuan untuk memilih dan menyaring informasi menjadi hal yang penting dalam kehidupan digital saat ini.
+      </p>
+    </article>
+
+    <!-- Footer Artikel (Tag Topik & Tombol Bagikan) -->
+    <div class="article-footer-meta">
+      <div class="tags-container">
+        <span class="tags-label">
+          <i data-lucide="tag" style="width: 14px; height: 14px;"></i> Topik:
+        </span>
+        <a class="tag-item" href="#">#Media Sosial</a>
+        <a class="tag-item" href="#">#Anak Muda</a>
+        <a class="tag-item" href="#">#Literasi Digital</a>
+        <a class="tag-item" href="#">#Informasi</a>
+      </div>
+
+      <div class="share-section">
+        <span class="share-title">Bagikan tulisan ini</span>
+        <div class="share-buttons">
+          <button aria-label="Bagikan ke WhatsApp" class="share-btn" id="share-wa">
+            <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp
+          </button>
+          <button aria-label="Bagikan ke X Twitter" class="share-btn" id="share-tw">
+            <i data-lucide="share-2" style="width: 16px; height: 16px;"></i> Twitter / X
+          </button>
+          <button aria-label="Salin Tautan" class="share-btn btn-copy" id="btn-copy-link">
+            <i data-lucide="link" style="width: 16px; height: 16px;"></i> <span id="copy-btn-text">Salin Tautan</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Rekomendasi Artikel Terkait -->
+    <section class="related-section">
+      <div class="related-header">
+        <h2 class="related-title">Artikel Terkait</h2>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Kartu 1 -->
+        <a class="article-card" href="#">
+          <div class="card-thumb card-thumb-pattern-1">
+            <i data-lucide="shield-check" style="width: 38px; height: 38px; color: #94a3b8;"></i>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Edukasi Digital</span>
+            <h3 class="card-title">5 Langkah Sederhana Memverifikasi Kebenaran Berita Online</h3>
+            <div class="card-meta">
+              <span>28 Agustus 2026</span>
+              <span>4 mnt baca</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Kartu 2 -->
+        <a class="article-card" href="#">
+          <div class="card-thumb card-thumb-pattern-2">
+            <i data-lucide="smartphone" style="width: 38px; height: 38px; color: #bae6fd;"></i>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Tren Generasi Z</span>
+            <h3 class="card-title">Bagaimana Algoritma Membentuk Sudut Pandang Anak Muda</h3>
+            <div class="card-meta">
+              <span>1 September 2026</span>
+              <span>5 mnt baca</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Kartu 3 -->
+        <a class="article-card" href="#">
+          <div class="card-thumb card-thumb-pattern-3">
+            <i data-lucide="book-open" style="width: 38px; height: 38px; color: #cbd5e1;"></i>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Opini &amp; Media</span>
+            <h3 class="card-title">Masa Depan Jurnalisme di Tengah Ledakan Kreator Konten</h3>
+            <div class="card-meta">
+              <span>3 September 2026</span>
+              <span>3 mnt baca</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. Footer Situs -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">Ruang Informasi</span>
+        <p class="footer-tagline">"Tempat membaca informasi dengan cara yang mudah dipahami."</p>
+      </div>
+
+      <nav>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">Beranda</a></li>
+          <li><a class="footer-link" href="#">Artikel</a></li>
+          <li><a class="footer-link" href="#">Tentang</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-copy">
+        © 2026 Ruang Informasi. Seluruh hak cipta dilindungi.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 6. Floating Back to Top Button -->
+  <button aria-label="Kembali ke atas" id="back-to-top">
+    <i data-lucide="arrow-up" style="width: 22px; height: 22px;"></i>
+  </button>
+
+  <!-- 7. Toast Notifikasi Salin Tautan -->
+  <div id="copy-toast">
+    <i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: #4ade80;"></i>
+    <span>Tautan berhasil disalin ke clipboard!</span>
+  </div>
+
+</body>
+</html>
